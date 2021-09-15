@@ -25,6 +25,10 @@ body {
     position: relative;
 }
 
+.swiper-pagination-bullet-active {
+    background: white;
+}
+
 .mySwiper {
     position: relative;
     height: 100%;
