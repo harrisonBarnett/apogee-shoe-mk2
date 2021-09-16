@@ -46,3 +46,128 @@ const observer = new IntersectionObserver(function(sections, observer) {
 sections.forEach(section => {
     observer.observe(section);
 });
+
+// SHOPIFY COLLECTION ELEMENT
+(function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+    } else {
+        loadScript();
+    }
+    } else {
+    loadScript();
+    }
+    function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+        domain: 'apogeeteststore.myshopify.com',
+        storefrontAccessToken: '1bca1a2be14e8c39f087bb07a65052f6',
+    });
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('collection', {
+        id: '278764257460',
+        node: document.getElementById('collection-component-1631817584556'),
+        moneyFormat: '%24%7B%7Bamount%7D%7D',
+        options: {
+    "product": {
+    "styles": {
+        "product": {
+        "@media (min-width: 601px)": {
+            "max-width": "calc(25% - 20px)",
+            "margin-left": "20px",
+            "margin-bottom": "50px",
+            "width": "calc(25% - 20px)"
+        },
+        "img": {
+            "height": "calc(100% - 15px)",
+            "position": "absolute",
+            "left": "0",
+            "right": "0",
+            "top": "0"
+        },
+        "imgWrapper": {
+            "padding-top": "calc(75% + 15px)",
+            "position": "relative",
+            "height": "0"
+        }
+        }
+    },
+    "text": {
+        "button": "Add to cart"
+    }
+    },
+    "productSet": {
+    "styles": {
+        "products": {
+        "@media (min-width: 601px)": {
+            "margin-left": "-20px"
+        }
+        }
+    }
+    },
+    "modalProduct": {
+    "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "button": false,
+        "buttonWithQuantity": true
+    },
+    "styles": {
+        "product": {
+        "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+        }
+        }
+    },
+    "text": {
+        "button": "Add to cart"
+    }
+    },
+    "option": {},
+    "cart": {
+    "text": {
+        "total": "Subtotal",
+        "button": "Checkout"
+    }
+    },
+    "toggle": {}
+},
+        });
+    });
+    }
+})();
+// SWIPER OBJECTS AND PARAMETERS
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    mousewheel: true,
+    direction: 'vertical',
+    spaceBetween: 50,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    nested: true,
+    parallax: true,
+    direction: "vertical",
+    mousewheel: {
+        releaseOnEdges: true
+    },
+    spaceBetween: 50,
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+  });
+
