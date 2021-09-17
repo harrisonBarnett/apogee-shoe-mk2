@@ -149,7 +149,10 @@ sections.forEach(section => {
 // SWIPER OBJECTS AND PARAMETERS
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
-    mousewheel: true,
+    mousewheel: {
+        thresholdDelta: 50,
+        releaseOnEdges: true
+    },
     direction: 'vertical',
     spaceBetween: 50,
     pagination: {
@@ -162,6 +165,7 @@ var swiper = new Swiper(".mySwiper", {
     parallax: true,
     direction: "vertical",
     mousewheel: {
+        thresholdDelta: 60,
         releaseOnEdges: true
     },
     spaceBetween: 50,
