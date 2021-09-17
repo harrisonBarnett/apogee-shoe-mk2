@@ -150,7 +150,7 @@ sections.forEach(section => {
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     mousewheel: {
-        thresholdDelta: 50,
+        thresholdDelta: 40,
         releaseOnEdges: true
     },
     direction: 'vertical',
@@ -165,7 +165,7 @@ var swiper = new Swiper(".mySwiper", {
     parallax: true,
     direction: "vertical",
     mousewheel: {
-        thresholdDelta: 60,
+        thresholdDelta: 40,
         releaseOnEdges: true
     },
     spaceBetween: 50,
