@@ -1,5 +1,8 @@
 const heroVid = document.querySelector(".hero-vid");
-setTimeout(() => {heroVid.classList.toggle('fade')}, 7000);
+setTimeout(() => {heroVid.classList.toggle('fade')}, 4000);
+const titleContainer = document.querySelector('.title-container');
+setTimeout(()=> {titleContainer.classList.toggle('on')}, 6000);
+
 
 // video is loaded on page render
 // toggling video view 
@@ -159,6 +162,7 @@ var swiper = new Swiper(".mySwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
+    invert: true
   });
   var swiper2 = new Swiper(".mySwiper2", {
     nested: true,

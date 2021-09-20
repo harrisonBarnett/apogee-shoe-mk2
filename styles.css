@@ -13,9 +13,10 @@ html {
 
 html,
 body {
-    background: rgb(44, 44, 44);
+    background: rgba(44, 44, 44, 1);
     position: relative;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     margin: 0;
     overflow: auto;
 }
@@ -57,23 +58,25 @@ body {
     overflow: hidden;
 }
 .hero-vid {
-    opacity: 1;
-    filter: brightness(65%) contrast(130%);
+    height: 100%;
+    width: 100%;
+    /* filter: brightness(65%) contrast(130%); */
     overflow: hidden;
 }
 
 .hero-vid.fade {
-    opacity: 1;
-    filter: brightness(65%) contrast(130%);
+    height: 100%;
+    width: 100%;
+    /* filter: brightness(65%) contrast(130%); */
     overflow: hidden;
 
     animation-name: fadeOut;
-    animation-duration: 4s;
+    animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     -webkit-animation-name: fadeOut;
-    -webkit-animation-duration: 4s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
     -webkit-animation-fill-mode: forwards;
@@ -86,12 +89,20 @@ body {
     from { opacity: 1; }
      to   { opacity: 0; }
  }
+.title-container {
+    opacity: 0;
+}
+.title-container.on {
+    opacity: 1;
+    transition: all 6s ease-out;
+}
 .title,
 .title-off {
     position: relative;
     z-index: 3;
     margin: 0;
     padding: 0;
+    width: 90%;
     font-family: 'Montserrat';
     text-align: center;
     color: none;
