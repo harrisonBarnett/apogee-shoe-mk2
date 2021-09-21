@@ -59,26 +59,24 @@ body {
 }
 .hero-vid {
     height: 100%;
-    width: 100%;
     /* filter: brightness(65%) contrast(130%); */
     overflow: hidden;
 }
 
 .hero-vid.fade {
     height: 100%;
-    width: 100%;
     /* filter: brightness(65%) contrast(130%); */
     overflow: hidden;
 
     animation-name: fadeOut;
-    animation-duration: 2s;
+    animation-duration: 4s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
     -webkit-animation-name: fadeOut;
-    -webkit-animation-duration: 2s;
+    -webkit-animation-duration: 4s;
     -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease;
     -webkit-animation-fill-mode: forwards;
 }
 @-webkit-keyframes fadeOut {
@@ -139,17 +137,8 @@ body {
     width: 100%;
     text-align: center;
 }
-.parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 200%;
-    background-size: cover;
-    background-position: center;
-}
-.slide-parallax {
-    background: none;
+.swiper-h {
+    background: white;
 }
 /* end slide two ===================================== */
 
@@ -258,5 +247,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+#section-4 iframe {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.shopify-buy-frame--toggle.is-sticky {
+    top: 5% !important;
 }
 /* end slide four styles====================== */

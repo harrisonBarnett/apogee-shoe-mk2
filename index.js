@@ -1,7 +1,7 @@
 const heroVid = document.querySelector(".hero-vid");
-setTimeout(() => {heroVid.classList.toggle('fade')}, 4000);
+setTimeout(() => {heroVid.classList.toggle('fade')}, 7000);
 const titleContainer = document.querySelector('.title-container');
-setTimeout(()=> {titleContainer.classList.toggle('on')}, 6000);
+setTimeout(()=> {titleContainer.classList.toggle('on')}, 8000);
 
 
 // video is loaded on page render
@@ -152,8 +152,8 @@ sections.forEach(section => {
 // SWIPER OBJECTS AND PARAMETERS
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
+    speed: 750,
     mousewheel: {
-        thresholdDelta: 40,
         releaseOnEdges: true
     },
     direction: 'vertical',
@@ -161,21 +161,16 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
-    },
-    invert: true
+    }
   });
   var swiper2 = new Swiper(".mySwiper2", {
     nested: true,
-    parallax: true,
-    direction: "vertical",
-    mousewheel: {
-        thresholdDelta: 40,
-        releaseOnEdges: true
+    loop: true,
+    direction: "horizontal",
+    speed: 1500,
+    autoplay: {
+        delay: 5000
     },
-    spaceBetween: 50,
-    // pagination: {
-    //   el: ".swiper-pagination",
-    //   clickable: true,
-    // },
+    spaceBetween: 50
   });
 
