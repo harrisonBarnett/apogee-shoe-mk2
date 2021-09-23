@@ -242,18 +242,19 @@ body {
 /* end slide three ============================ */
 
 /* SLIDE FOUR STYLES ========================= */
-.section-4 {
+#section-4 {
     background-image: url('./images/gymfloor.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-#section-4 iframe {
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.mySwiper3 {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    border: 1px dotted red;
 }
-.shopify-buy-frame--toggle.is-sticky {
-    top: 5% !important;
-}
+
+
 /* end slide four styles====================== */
