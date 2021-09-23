@@ -242,7 +242,7 @@ body {
 /* end slide three ============================ */
 
 /* SLIDE FOUR STYLES ========================= */
-#section-4 {
+.section-4 {
     background-image: url('./images/gymfloor.jpg');
     background-size: cover;
     background-position: center;
