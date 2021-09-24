@@ -57,19 +57,15 @@ body {
     background-repeat: no-repeat;
     overflow: hidden;
 }
-.hero-vid {
-    height: 100vh;
-    width: 100vw;
-    /* filter: brightness(65%) contrast(130%); */
+
+
+.hero-vid,
+.hero-vid.fade {
+    height: 100%;
     overflow: hidden;
 }
 
 .hero-vid.fade {
-    height: 100vh;
-    width: 100vw;
-    /* filter: brightness(65%) contrast(130%); */
-    overflow: hidden;
-
     animation-name: fadeOut;
     animation-duration: 4s;
     animation-iteration-count: 1;
@@ -244,15 +240,31 @@ body {
 /* end slide three ============================ */
 
 /* SLIDE FOUR STYLES ========================= */
-.section-4 {
+#section-4 {
     background-image: url('./images/gymfloor.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.shopify-buy-frame {
-    position: absolute;
-    bottom: 0;
-}
+
 
 /* end slide four styles====================== */
+
+/* SHOPIFY STYLES */
+.shopify-buy-frame--productSet {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 75%;
+    transform: translateX(-50%);
+    padding: 1em;
+    background: rgba(0,0,0,.55);
+    box-shadow: 1px 1px 4px rgba(0,0,0,.35),
+                2px 2px 4px rgba(0,0,0,.25),
+                3px 3px 4px rgba(0,0,0,.15);
+    border-radius: 15px;
+}
+
+.shopify-buy-frame--toggle {
+    position: absolute;
+    bottom: -33%;
