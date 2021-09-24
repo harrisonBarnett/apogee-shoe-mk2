@@ -75,6 +75,7 @@ var swiper = new Swiper(".mySwiper", {
     },
     spaceBetween: 50
   });
+
   // PRODUCT GALLERY
   (function () {
     var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
