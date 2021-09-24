@@ -58,14 +58,15 @@ body {
     overflow: hidden;
 }
 .hero-vid {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     /* filter: brightness(65%) contrast(130%); */
     overflow: hidden;
 }
 
 .hero-vid.fade {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     /* filter: brightness(65%) contrast(130%); */
     overflow: hidden;
 
@@ -243,17 +244,15 @@ body {
 /* end slide three ============================ */
 
 /* SLIDE FOUR STYLES ========================= */
-#section-4 {
+.section-4 {
     background-image: url('./images/gymfloor.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.mySwiper3 {
-    position: relative;
-    height: fit-content;
-    border: 1px dotted red;
+.shopify-buy-frame {
+    position: absolute;
+    bottom: 0;
 }
-
 
 /* end slide four styles====================== */
