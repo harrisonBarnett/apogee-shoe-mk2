@@ -118,11 +118,11 @@ body {
     left: 50%;
     top: 33%;
     transform: translate(-50%, -33%);;
-    transition: all 300ms ease;
+    transition: all 750ms ease;
 }
 .title-off {
     transform: translate(-50%, -25vh);
-    transition: all 300ms ease;
+    transition: all 750ms ease;
     overflow: hidden;
 }
 
