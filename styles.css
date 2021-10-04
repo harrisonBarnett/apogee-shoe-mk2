@@ -252,7 +252,6 @@ body {
 }
 
 .product-gallery-container {
-    padding: 1em;
     margin: 0 auto;
 
     position: absolute;
@@ -267,15 +266,13 @@ body {
     display: flex;
     flex-direction: column;
 
-    transition: all 1s ease;
+    transition: all 500ms ease;
 }
 .product-gallery-container.hide {
     width: 0;
     padding: 0;
     margin: 0;
-
-
-    transition: all 1s ease;
+    transition: all 500ms ease;
 }
 
 .gallery-row {
@@ -306,6 +303,19 @@ body {
 
 /* slide 5 -- contact ========================= */
 #section-5 {
+    position: relative;
     background: lightgray;
 }
+
+.footer {
+    padding: .5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    
+    background: rgba(0,0,0,.5);
+}
+/* end slide 5 -- contact ===================== */
 

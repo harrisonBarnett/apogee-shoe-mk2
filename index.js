@@ -62,7 +62,7 @@ sections.forEach(section => {
 // SWIPER OBJECTS AND PARAMETERS
 var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
-    speed: 750,
+    speed: 500,
     mousewheel: {
         releaseOnEdges: true
     },
