@@ -17,6 +17,14 @@ function playVideo() {
     setTimeout(() => {video.classList.toggle('show')}, 250)
 }
 
+// toggling the product gallery
+function toggleProductGallery() {
+    const gallery = document.querySelector('.product-gallery-container');
+    gallery.classList.toggle('hide');
+}
+
+
+// intersection observer options
 const sections = document.querySelectorAll('.slide-flow');
 // options must be set (even if empty) to compile
 const options = {

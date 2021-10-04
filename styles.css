@@ -45,9 +45,11 @@ body {
     justify-content: center;
 }
 .slide-flow {
+    margin: 0 auto;
     font-size: 60px;
     height: 100vh;
     width: 100vw;
+    max-width: 1200px;
 }
 /* SLIDE ONE STYLES =================================== */
 #section-1 {
@@ -242,6 +244,7 @@ body {
 
 /* SLIDE FOUR STYLES ========================= */
 #section-4 {
+    position: relative;
     background-image: url('./images/gymfloor.jpg');
     background-size: cover;
     background-position: center;
@@ -250,17 +253,36 @@ body {
 
 .product-gallery-container {
     padding: 1em;
+    margin: 0 auto;
 
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
+    max-height: 100vh;
+
     width: 75%;
     background: rgba(255,255,255,.5);
 
     display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
+    flex-direction: column;
+
+    transition: all 1s ease;
+}
+.product-gallery-container.hide {
+    width: 0;
+    padding: 0;
+    margin: 0;
+
+
+    transition: all 1s ease;
+}
+
+.gallery-row {
+    display: flex;
+    width: 100%;
+    margin: 1em 0;
+    justify-content: space-around;
 }
 
 .product {
@@ -269,5 +291,16 @@ body {
     background: red;
 }
 
+.toggle-bar {
+    position: absolute;
+    top: 0;
+    right: -40px;
+    bottom: 0;
+    width: 40px;
+
+    cursor: pointer;
+
+    background: red;
+}
 /* end slide four styles====================== */
 
