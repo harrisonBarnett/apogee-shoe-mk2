@@ -20,6 +20,10 @@ function playVideo() {
 // toggling the product gallery
 function toggleProductGallery() {
     const gallery = document.querySelector('.product-gallery-container');
+    const rows = document.querySelectorAll('.gallery-row');
+    rows.forEach(row => {
+        row.classList.toggle('hide');
+    })
     gallery.classList.toggle('hide');
 }
 
