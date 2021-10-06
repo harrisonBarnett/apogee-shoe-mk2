@@ -20,27 +20,30 @@
 
     <div class="swiper mySwiper swiper-v">
         <div class="swiper-wrapper">
-            <!-- first slide -- hero slide -->
+            <!-- HERO SLIDE -->
           <div class="swiper-slide slide-flow"
           id="section-hero">
             <div class="title-container">
               <img class="title" id="title" src="./images/apogee-athletic-white-words-outline.png" alt="apogee logo in white">
             </div>
-            
-            <video 
-              autoplay 
-              muted 
-              playsinline 
-              class="hero-vid">
-              <source src="./images/hero-video.mp4" type="video/mp4">
-            </video>
           </div>
-            <!-- second slide -- product slide, parallax view -->
+
+          <!-- VIDEO SLIDE -->
+          <div class="swiper-slide slide-flow"
+          id="section-video">
+            <div class="section-overlay"></div>
+            <img src="./images/play_circle_outline_white_24dp.svg" alt="play button" class="play-button" id="play-btn" onclick="playVideo()">
+            <iframe 
+            class="feature-video" 
+            src="https://www.youtube.com/embed/B-N1yJyrQRY?controls=0" 
+            frameborder="0"></iframe>
+          </div>
+
+            <!-- PRODUCT SHOT SLIDE -->
           <div class="swiper-slide slide-flow"
           id="section-product-swiper">
-            <div class="swiper mySwiper2">
-              <!-- the parallax bg -->
 
+            <div class="swiper mySwiper2">
               <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-h">
                   Horizontal Slide 1
@@ -52,21 +55,11 @@
                   Horizontal Slide 3
                 </div>
               </div>
-              <!-- <div class="swiper-pagination"></div> -->
             </div>
-          </div>
-          <!-- third slide -- product video -->
-          <div class="swiper-slide slide-flow"
-          id="section-video">
-            <div class="section-overlay"></div>
-            <img src="./images/play_circle_outline_white_24dp.svg" alt="play button" class="play-button" id="play-btn" onclick="playVideo()">
-            <iframe 
-            class="feature-video" 
-            src="https://www.youtube.com/embed/B-N1yJyrQRY?controls=0" 
-            frameborder="0"></iframe>
+
           </div>
           
-          <!-- fourth slide -- products -->
+          <!-- SHOP SLIDE -->
           <div class="swiper-slide slide-flow" id="section-shop">
             <div class="product-gallery-container">
               <div class="gallery-row gallery-row-1">              
@@ -83,6 +76,7 @@
             </div>
           </div>
 
+          <!-- CONTACT SLIDE -->
           <div class="swiper-slide slide-flow" id="section-contact">
             <h3>social</h3>
             <h3>podcast</h3>

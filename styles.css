@@ -62,32 +62,6 @@ body {
     overflow: hidden;
 }
 
-.hero-vid,
-.hero-vid.fade {
-    width: 100%;
-    overflow: hidden;
-}
-
-.hero-vid.fade {
-    animation-name: fadeOut;
-    animation-duration: 4s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    -webkit-animation-name: fadeOut;
-    -webkit-animation-duration: 4s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-}
-@-webkit-keyframes fadeOut {
-    from { opacity: 1; }
-     to   { opacity: 0; }
- }
- @keyframes fadeOut {
-    from { opacity: 1; }
-     to   { opacity: 0; }
- }
 .title-container {
     opacity: 0;
 }

@@ -1,7 +1,5 @@
-const heroVid = document.querySelector(".hero-vid");
-setTimeout(() => {heroVid.classList.toggle('fade')}, 7000);
 const titleContainer = document.querySelector('.title-container');
-setTimeout(()=> {titleContainer.classList.toggle('on')}, 8000);
+setTimeout(()=> {titleContainer.classList.toggle('on')}, 500);
 
 
 // video is loaded on page render
