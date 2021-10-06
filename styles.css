@@ -52,7 +52,7 @@ body {
     max-width: 1200px;
 }
 /* SLIDE ONE STYLES =================================== */
-#section-1 {
+#section-hero {
     position: relative;
     background-image: url('./images/tying-shoe.jpg');
     filter: brightness(90%) contrast(120%) grayscale(33%);
@@ -131,7 +131,7 @@ body {
 
 /* end slide one styles =============================== */
 
-/* SLIDE TWO -- PARALLAX SLIDER ======================= */
+/* SLIDE TWO -- PRODUCT SHOT SLIDER ======================= */
 .mySwiper2 {
     position: relative;
     height: 100%;
@@ -145,7 +145,7 @@ body {
 
 /* SLIDE THREE ================================ */
 
-#section-3 {
+#section-video {
     position: relative;
     background-image: url('./images/flying.jpg');
     background-position: center;
@@ -243,48 +243,49 @@ body {
 /* end slide three ============================ */
 
 /* SLIDE FOUR STYLES ========================= */
-#section-4 {
+#section-shop {
     position: relative;
     background-image: url('./images/gymfloor.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
 }
-
-.product-gallery-container {
-    margin: 0 auto;
-
+.product-gallery-container,
+.product-gallery-container.show {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     max-height: 100vh;
-
-    width: 75%;
-    background: rgba(255,255,255,.5);
-
+    padding: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    background: rgba(86, 67, 67, 0.5);
+
 
     transition: all 500ms ease;
 }
-.product-gallery-container.hide {
+.product-gallery-container {
     width: 0;
-    padding: 0;
-    margin: 0;
-    transition: all 500ms ease;
 }
-
-.gallery-row {
+.product-gallery-container.show {
+    width: 75%;
+}
+.gallery-row,
+.gallery-row.show {
     display: flex;
     width: 100%;
     margin: 1em 0;
     justify-content: space-around;
-    opacity: 1;
+}
+.gallery-row {
+    opacity: 0;
     transition: all 500ms ease;
 }
-.gallery-row.hide {
-    opacity: 0;
+.gallery-row.show {
+    opacity: 1;
     transition: all 500ms ease;
 }
 
@@ -308,7 +309,7 @@ body {
 /* end slide four styles====================== */
 
 /* slide 5 -- contact ========================= */
-#section-5 {
+#section-contact {
     position: relative;
     background: lightgray;
 }

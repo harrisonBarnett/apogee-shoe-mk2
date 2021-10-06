@@ -22,9 +22,9 @@ function toggleProductGallery() {
     const gallery = document.querySelector('.product-gallery-container');
     const rows = document.querySelectorAll('.gallery-row');
     rows.forEach(row => {
-        row.classList.toggle('hide');
+        row.classList.toggle('show');
     })
-    gallery.classList.toggle('hide');
+    gallery.classList.toggle('show');
 }
 
 
@@ -43,16 +43,16 @@ const playButton = document.getElementById('play-btn');
 const observer = new IntersectionObserver(function(sections, observer) {
     sections.forEach(entry => {
         // toggle appearance of title
-        if(entry.isIntersecting && entry.target.id==('section-1')) {
+        if(entry.isIntersecting && entry.target.id==('section-hero')) {
             title.className = 'title';
-        } else if(entry.target.id==('section-1') && !entry.isIntersecting){
+        } else if(entry.target.id==('section-hero') && !entry.isIntersecting){
             title.className = 'title-off';
         }
 
         // toggle the appearance of play button in section two
-        if(entry.isIntersecting && entry.target.id==('section-3')) {
+        if(entry.isIntersecting && entry.target.id==('section-video')) {
             playButton.className = 'play-button-on';
-        } else if(entry.target.id==('section-3') && !entry.isIntersecting){
+        } else if(entry.target.id==('section-video') && !entry.isIntersecting){
             playButton.className = 'play-button-off';
         }
     });
