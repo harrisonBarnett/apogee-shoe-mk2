@@ -15,18 +15,8 @@ function playVideo() {
     setTimeout(() => {video.classList.toggle('show')}, 250)
 }
 
-// toggling the product gallery
-function toggleProductGallery() {
-    const gallery = document.querySelector('.product-gallery-container');
-    const rows = document.querySelectorAll('.gallery-row');
-    rows.forEach(row => {
-        row.classList.toggle('show');
-    })
-    gallery.classList.toggle('show');
-}
-
-
-// intersection observer options
+// INTERSECTION OBSERVER
+// options
 const sections = document.querySelectorAll('.slide-flow');
 // options must be set (even if empty) to compile
 const options = {
@@ -34,8 +24,7 @@ const options = {
     threshold: .4,
     rootMargin: "0px 0px 0px 0px"
 };
-
-// intersection observers
+// implementation
 const title = document.getElementById('title');
 const playButton = document.getElementById('play-btn');
 const observer = new IntersectionObserver(function(sections, observer) {
@@ -86,4 +75,315 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 50
   });
 
+// PRODUCTS
+// black shirt
+(function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'apogee-athletic-store.myshopify.com',
+        storefrontAccessToken: '33ce3d72e7286f6fa6e6a397e69f60f0',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '7329154891997',
+          node: document.getElementById('product-component-1634048603243'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+    "product": {
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "calc(25% - 20px)",
+            "margin-left": "20px",
+            "margin-bottom": "50px"
+          }
+        },
+        "button": {
+          "font-family": "Montserrat, sans-serif",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          "background-color": "#ffc64a",
+          ":focus": {
+            "background-color": "#e6b243"
+          },
+          "border-radius": "40px",
+          "padding-left": "20px",
+          "padding-right": "20px"
+        }
+      },
+      "contents": {
+        "img": false,
+        "title": false,
+        "price": false
+      },
+      "text": {
+        "button": "Add to cart"
+      },
+      "googleFonts": [
+        "Montserrat"
+      ]
+    },
+    "productSet": {
+      "styles": {
+        "products": {
+          "@media (min-width: 601px)": {
+            "margin-left": "-20px"
+          }
+        }
+      }
+    },
+    "modalProduct": {
+      "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "button": false,
+        "buttonWithQuantity": true
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+          }
+        },
+        "button": {
+          "font-family": "Montserrat, sans-serif",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          "background-color": "#ffc64a",
+          ":focus": {
+            "background-color": "#e6b243"
+          },
+          "border-radius": "40px",
+          "padding-left": "20px",
+          "padding-right": "20px"
+        }
+      },
+      "googleFonts": [
+        "Montserrat"
+      ],
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "option": {},
+    "cart": {
+      "styles": {
+        "button": {
+          "font-family": "Montserrat, sans-serif",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          "background-color": "#ffc64a",
+          ":focus": {
+            "background-color": "#e6b243"
+          },
+          "border-radius": "40px"
+        }
+      },
+      "text": {
+        "total": "Subtotal",
+        "button": "Checkout"
+      },
+      "googleFonts": [
+        "Montserrat"
+      ]
+    },
+    "toggle": {
+      "styles": {
+        "toggle": {
+          "font-family": "Montserrat, sans-serif",
+          "background-color": "#ffc64a",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          ":focus": {
+            "background-color": "#e6b243"
+          }
+        }
+      },
+      "googleFonts": [
+        "Montserrat"
+      ]
+    }
+  },
+        });
+      });
+    }
+  })();
+// blue shirt
+(function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'apogee-athletic-store.myshopify.com',
+        storefrontAccessToken: '33ce3d72e7286f6fa6e6a397e69f60f0',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('product', {
+          id: '7329155383517',
+          node: document.getElementById('product-component-1634048728214'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+    "product": {
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "calc(25% - 20px)",
+            "margin-left": "20px",
+            "margin-bottom": "50px"
+          }
+        },
+        "button": {
+          "font-family": "Montserrat, sans-serif",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          "background-color": "#ffc64a",
+          ":focus": {
+            "background-color": "#e6b243"
+          },
+          "border-radius": "40px",
+          "padding-left": "20px",
+          "padding-right": "20px"
+        }
+      },
+      "contents": {
+        "img": false,
+        "title": false,
+        "price": false
+      },
+      "text": {
+        "button": "Add to cart"
+      },
+      "googleFonts": [
+        "Montserrat"
+      ]
+    },
+    "productSet": {
+      "styles": {
+        "products": {
+          "@media (min-width: 601px)": {
+            "margin-left": "-20px"
+          }
+        }
+      }
+    },
+    "modalProduct": {
+      "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "button": false,
+        "buttonWithQuantity": true
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+          }
+        },
+        "button": {
+          "font-family": "Montserrat, sans-serif",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          "background-color": "#ffc64a",
+          ":focus": {
+            "background-color": "#e6b243"
+          },
+          "border-radius": "40px",
+          "padding-left": "20px",
+          "padding-right": "20px"
+        }
+      },
+      "googleFonts": [
+        "Montserrat"
+      ],
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "option": {},
+    "cart": {
+      "styles": {
+        "button": {
+          "font-family": "Montserrat, sans-serif",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          "background-color": "#ffc64a",
+          ":focus": {
+            "background-color": "#e6b243"
+          },
+          "border-radius": "40px"
+        }
+      },
+      "text": {
+        "total": "Subtotal",
+        "button": "Checkout"
+      },
+      "googleFonts": [
+        "Montserrat"
+      ]
+    },
+    "toggle": {
+      "styles": {
+        "toggle": {
+          "font-family": "Montserrat, sans-serif",
+          "background-color": "#ffc64a",
+          ":hover": {
+            "background-color": "#e6b243"
+          },
+          ":focus": {
+            "background-color": "#e6b243"
+          }
+        }
+      },
+      "googleFonts": [
+        "Montserrat"
+      ]
+    }
+  },
+        });
+      });
+    }
+  })();
   
