@@ -219,15 +219,13 @@ body {
 /* SLIDE FOUR STYLES ========================= */
 #section-shop {
     position: relative;
-    background-image: url('./images/gymfloor.jpg');
+    background-image: url('./images/handstand.JPG');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
 }
-
 #product-container {
-
     width: 100%;
     height: 100%;
     display: flex;

@@ -103,7 +103,7 @@ var swiper = new Swiper(".mySwiper", {
       ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
           id: '7329154891997',
-          node: document.getElementById('product-component-1634048603243'),
+          node: document.getElementById('product-component-1634052000875'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
     "product": {
@@ -128,11 +128,6 @@ var swiper = new Swiper(".mySwiper", {
           "padding-left": "20px",
           "padding-right": "20px"
         }
-      },
-      "contents": {
-        "img": false,
-        "title": false,
-        "price": false
       },
       "text": {
         "button": "Add to cart"
@@ -258,7 +253,7 @@ var swiper = new Swiper(".mySwiper", {
       ShopifyBuy.UI.onReady(client).then(function (ui) {
         ui.createComponent('product', {
           id: '7329155383517',
-          node: document.getElementById('product-component-1634048728214'),
+          node: document.getElementById('product-component-1634052049733'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
     "product": {
@@ -283,11 +278,6 @@ var swiper = new Swiper(".mySwiper", {
           "padding-left": "20px",
           "padding-right": "20px"
         }
-      },
-      "contents": {
-        "img": false,
-        "title": false,
-        "price": false
       },
       "text": {
         "button": "Add to cart"
