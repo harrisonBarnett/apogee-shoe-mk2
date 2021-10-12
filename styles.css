@@ -247,7 +247,21 @@ body {
     position: relative;
     background: lightgray;
 }
+.contact-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
 
+}
+.podcast-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+}
 .footer {
     padding: .5em;
     position: absolute;
