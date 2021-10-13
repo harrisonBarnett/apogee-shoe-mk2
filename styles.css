@@ -13,7 +13,7 @@ html {
 
 html,
 body {
-    background: rgba(44, 44, 44, 1);
+    background: rgba(40, 40, 40, 1);
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -21,7 +21,6 @@ body {
     overflow: auto;
 }
 body {
-    background: black;
     margin: 0;
     padding: 0;
     position: relative;
@@ -50,6 +49,8 @@ body {
     height: 100vh;
     width: 100vw;
     max-width: 1200px;
+    box-shadow: 6px 6px 6px rgba(0,0,0,.25),
+    -6px -6px 6px rgba(0,0,0,.25);
 }
 /* SLIDE ONE STYLES =================================== */
 #section-hero {
@@ -92,7 +93,7 @@ body {
 .title {
     position: absolute;
     left: 50%;
-    top: 33%;
+    top: 50%;
     transform: translate(-50%, -33%);;
     transition: all 750ms ease;
 }
@@ -251,36 +252,38 @@ body {
 }
 .contact-container {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     bottom: 0;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .comment-container {
     display: flex;
     flex-direction: column;
     width: 50%;
 }
-#contact-section-logo {
-    height: 400px;
-    width: 400px;
-}
 .podcast-container {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     bottom: 0;
     width: 50%;
+
+    box-shadow: 1px 1px 8px rgba(0,0,0,.15);
+
 }
 .footer {
-    padding: .5em;
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 100%;
+    display: flex;
+    justify-content: right;
     font-size: 16px;
-    
-    background: rgba(0,0,0,.5);
 }
+
 /* end slide 5 -- contact ===================== */
 
