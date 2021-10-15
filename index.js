@@ -1,3 +1,4 @@
+
 const titleContainer = document.querySelector('.title-container');
 setTimeout(()=> {titleContainer.classList.toggle('on')}, 500);
 
@@ -376,4 +377,3 @@ var swiper = new Swiper(".mySwiper", {
       });
     }
   })();
-  

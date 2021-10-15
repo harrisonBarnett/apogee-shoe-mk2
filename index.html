@@ -14,6 +14,8 @@
     <!-- custom css -->
     <link rel="stylesheet" href="styles.css">
 
+
+
 </head>
 <body>
     <!-- Swiper -->
@@ -91,12 +93,21 @@
               </div>
               <div
               class='comment-container'>
-                <label
-                for='comment-input'>contact</label>
-                <input 
-                name='comment-input'
-                type='text'></input>
-                <button>send</button>
+                <form id="contact-form">
+                  <div class="field">
+                    <label for="from_email">email</label>
+                    <input type="text" name="from_email" id="from_email">
+                  </div>
+                  <input type="submit" id="button" value="Send Email" >
+                <!-- emailJS -->
+                <script type="text/javascript"
+                  src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+                
+                <script type="text/javascript">
+                  emailjs.init('user_WlTsXA7UCghSnkuPSYuYl')
+                </script>
+              </form>
+
               </div>
             </div>
 
@@ -112,6 +123,7 @@
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
       <!-- custom js -->
       <script src="index.js"></script>
-  
+
+      
 </body>
 </html>
